@@ -1,11 +1,18 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import Main from "@/components/Main/Main";
+import React from "react";
+
+const Page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>
-        Isabi Tech
-      </h1>
-    </main>
+    <div>
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
-}
+};
+
+export default Page;

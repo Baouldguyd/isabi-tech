@@ -22,10 +22,10 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className=" h-[70svh]   flex  items-center ">
-      <div className="  h-[80%] w-[100%]  flex p-4 gap-4">
+    <div className=" h-[70svh]   ">
+      <div className="  h-[80%] w-[100%]  grid grid-cols-[1fr_30rem] p-4 gap-4">
         {/* call to action */}
-        <div className="bg-[#EBEDEE] h-full w-[70%] rounded-md">
+        <div className="bg-[#EBEDEE] h-full rounded-md">
           {/* Header */}
           <div className=" flex justify-center items-center md:mt-8 flex-col gap-4 p-10">
             <p className="  text-3xl w-[70%] m-auto text-center font-[manrope-bold]">
@@ -65,11 +65,11 @@ const HeroPage = () => {
         </div>
 
         {/* image container */}
-        <div className="  h-full w-[30%] rounded-md">
+        <div className="  h-full  rounded-md ">
           <Image
           alt="Brain Image"
           src={brainImage}
-          className=" w-[30rem] h-[100%]"
+          className=" w-[100%] h-[100%]"
           />
         </div>
       </div>

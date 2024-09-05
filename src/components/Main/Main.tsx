@@ -1,9 +1,12 @@
 import React from 'react'
 import HeroPage from './HeroPage'
+import Services from './Services'
 
 const Main = () => {
   return (
-    <div><HeroPage /></div>
+    <div><HeroPage />
+    <Services />
+    </div>
   )
 }
 

@@ -22,7 +22,7 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className=" h-[70svh]   ">
+    <div className=" h-[70svh] w-[90%] m-auto  ">
       <div className="  h-[80%] w-[100%]  grid grid-cols-[1fr_30rem] p-4 gap-4">
         {/* call to action */}
         <div className="bg-[#EBEDEE] h-full rounded-md">

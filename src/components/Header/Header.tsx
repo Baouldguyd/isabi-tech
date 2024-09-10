@@ -3,7 +3,7 @@ import Logo from "@/assets/Logo/Logo.png";
 
 const Header = () => {
   return (
-    <div className=" h-[100%]  flex  items-center">
+    <div className=" h-[100%]  flex  items-center w-[90%] m-auto font-[manrope-regular]">
     <div className=" flex justify-between w-full px-6 ">
       {/* Logo */}
       <div className=" w-[70px] h-[70px] bg-[#EBEDEE] rounded-md flex justify-center items-center">

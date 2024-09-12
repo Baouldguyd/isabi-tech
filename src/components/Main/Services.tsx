@@ -1,18 +1,29 @@
+import AnalysisIcon from "@/assets/Icon/AnalysisIcon";
 import ArrowUpDownIcon from "@/assets/Icon/ArrowUpDownIcon";
 import BackEndIcon from "@/assets/Icon/BackEndIcon";
+import BugIcon from "@/assets/Icon/BugIcon";
 import CodeIcon from "@/assets/Icon/CodeIcon";
 import CollateralIcon from "@/assets/Icon/CollateralIcon";
 import CustomIcon from "@/assets/Icon/CustomIcon";
+import DemoIcon from "@/assets/Icon/DemoIcon";
 import DeployIcon from "@/assets/Icon/DeployIcon";
+import FeedbackIcon from "@/assets/Icon/FeedbackIcon";
+import FunctionIcon from "@/assets/Icon/FunctionIcon";
 import GuidelineIcon from "@/assets/Icon/GuidelineIcon";
 import IdentityIcon from "@/assets/Icon/IdentityIcon";
 import CursorBlueIcon from "@/assets/Icon/MouseBlueIcon";
 import MouseLineIcon from "@/assets/Icon/MouseLineIcon";
 import MouseRoundIcon from "@/assets/Icon/MouseRoundIcon";
 import NativeIcon from "@/assets/Icon/NativeIcon";
+import PlanIcon from "@/assets/Icon/PlanIcon";
+import ProjectIcon from "@/assets/Icon/ProjectIcon";
 import ReactNativeIcon from "@/assets/Icon/ReactNativeIcon";
 import RespIcon from "@/assets/Icon/RespIcon";
+import ScrumIcon from "@/assets/Icon/ScrumIcon";
+import SecurityIcon from "@/assets/Icon/SecurityIcon";
+import SprintIcon from "@/assets/Icon/SprintIcon";
 import StrategyIcon from "@/assets/Icon/StrategyIcon";
+import TaskIcon from "@/assets/Icon/TaskIcon";
 import TypoIcon from "@/assets/Icon/TypoIcon";
 import UiUxIcon from "@/assets/Icon/UiUxIcon";
 import VisualIcon from "@/assets/Icon/VisualIcon";
@@ -143,8 +154,66 @@ const Services = () => {
     },
   ];
 
+  const projectManagement = [
+    {
+      text: "Requirements Gathering and Analysis",
+      icon: <AnalysisIcon />,
+    },
+    {
+      text: "Project Roadmap and Timeline Development",
+      icon: <ProjectIcon />,
+    },
+    {
+      text: "Resource Allocation and Task Assignment",
+      icon: <TaskIcon />,
+    },
+    
+  ];
+
+  const agileMethodology = [
+    {
+      text: "Iterative Development and Sprints",
+      icon: <SprintIcon />,
+    },
+    {
+      text: "Scrum Methodology Implementation",
+      icon: <ScrumIcon />,
+    },
+    {
+      text: "Regular Progress Updates and Demos",
+      icon: <DemoIcon />,
+    },
+    {
+      text: "Continuous Improvement and Feedback Incorporation",
+      icon: <FeedbackIcon />,
+    }
+    
+  ];
+
+  const dataAnalysis = [
+    {
+      text: "Iterative Development and Sprints",
+      icon: <PlanIcon />,
+    },
+    {
+      text: "Scrum Methodology Implementation",
+      icon: <FunctionIcon />,
+    },
+    {
+      text: "Regular Progress Updates and Demos",
+      icon: <SecurityIcon />,
+    },
+    {
+      text: "Continuous Improvement and Feedback Incorporation",
+      icon: <BugIcon />,
+    }
+    
+  ];
+
+
+
   return (
-    <div className=" h-[150rem] bg-[#EBEDEE] rounded-md font-[manrope-regular] w-[90%] m-auto ">
+    <div className=" h-[300rem] bg-[#EBEDEE] rounded-md font-[manrope-regular] w-[90%] m-auto ">
       {/* Our services */}
       <div className=" h-[10rem]  p-7 flex flex-col gap-2">
         <h1 className="  font-[manrope-extraBold] text-center text-[30px]  font-bold  ">
@@ -333,11 +402,127 @@ const Services = () => {
                 </div>
               ))}
             </div>
+
+            {/* Project Management */}
+            <div  className=" flex flex-col gap-4 ">
+              <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
+              Project Management
+            </p>
+            <p className=" font-[manrope-light] ">
+            Our experienced project management team ensures that your projects are delivered on time, within budget,
+             and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process.
+            </p>
+            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
+              <p className=" font-[manrope-semibold]">Our services include:</p>
+            </div>
+            <div>Project Planning and Scoping</div>
+            <div className=" flex flex-row gap-[10rem] ">
+              {projectManagement.map((item, index) => (
+                <div
+                  key={index}
+                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                >
+                  {/* Icon div */}
+                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                    {item.icon}
+                  </div>
+                  {/* Text div */}
+                  <div>
+                    <p className=" font-[manrope-regular]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div>
+            <div>Agile Methodology</div>
+            <div className="flex gap-4 justify-between  ">
+              {agileMethodology.map((item, index) => (
+                <div
+                  key={index}
+                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                >
+                  {/* Icon div */}
+                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                    {item.icon}
+                  </div>
+                  {/* Text div */}
+                  <div>
+                    <p className=" font-[manrope-regular]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Social Media Management */}
+          <div className=" flex flex-col gap-4 ">
+            <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
+            Social Media Management
+            </p>
+            <p className=" font-[manrope-light] ">
+            We help in boosting your online presence with targeted social media strategies and management tools.
+            </p>
+            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
+              <p className=" font-[manrope-semibold]">Our services include:</p>
+            </div>
+
+            <div className=" flex gap-4 justify-between">
+              {businessPromotion.map((item, index) => (
+                <div
+                  key={index}
+                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                >
+                  {/* Icon div */}
+                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                    {item.icon}
+                  </div>
+                  {/* Text div */}
+                  <div>
+                    <p className=" font-[manrope-regular]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            </div>
+
+            {/* Data Analysis */}
+          <div className=" flex flex-col gap-4 ">
+            <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
+            Data Analysis
+            </p>
+            <p className=" font-[manrope-light] ">
+            We leverage data insights to drive informed decision-making and business growth
+            </p>
+            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
+              <p className=" font-[manrope-semibold]">Our services include:</p>
+            </div>
+
+            <div className=" flex gap-4 justify-between">
+              {dataAnalysis.map((item, index) => (
+                <div
+                  key={index}
+                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                >
+                  {/* Icon div */}
+                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                    {item.icon}
+                  </div>
+                  {/* Text div */}
+                  <div>
+                    <p className=" font-[manrope-regular]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            </div>
               </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
+      </div>
+
   );
 };
 

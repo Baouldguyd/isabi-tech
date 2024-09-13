@@ -167,7 +167,6 @@ const Services = () => {
       text: "Resource Allocation and Task Assignment",
       icon: <TaskIcon />,
     },
-    
   ];
 
   const agileMethodology = [
@@ -186,8 +185,7 @@ const Services = () => {
     {
       text: "Continuous Improvement and Feedback Incorporation",
       icon: <FeedbackIcon />,
-    }
-    
+    },
   ];
 
   const dataAnalysis = [
@@ -206,14 +204,11 @@ const Services = () => {
     {
       text: "Continuous Improvement and Feedback Incorporation",
       icon: <BugIcon />,
-    }
-    
+    },
   ];
 
-
-
   return (
-    <div className=" h-[300rem] bg-[#EBEDEE] rounded-md font-[manrope-regular] w-[90%] m-auto ">
+    <div className=" h-auto bg-[#EBEDEE] rounded-md font-[manrope-regular] w-[90%] m-auto ">
       {/* Our services */}
       <div className=" h-[10rem]  p-7 flex flex-col gap-2">
         <h1 className="  font-[manrope-extraBold] text-center text-[30px]  font-bold  ">
@@ -312,7 +307,7 @@ const Services = () => {
         </div>
 
         {/* Mobile App Development */}
-        <div className=" flex flex-col gap-4 ">
+        <div className=" flex flex-col gap-4 mt-[4rem] ">
           <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
             Mobile App Development
           </p>
@@ -321,7 +316,7 @@ const Services = () => {
             enhance user experience and engagement.
           </p>
 
-          <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
+          <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA]  mt-6 mb-6">
             <p className=" font-[manrope-semibold]">Our services include:</p>
           </div>
           <div className=" flex gap-4 justify-between">
@@ -343,7 +338,7 @@ const Services = () => {
           </div>
 
           {/* Business Promotion */}
-          <div className=" flex flex-col gap-4 ">
+          <div className=" flex flex-col gap-4 mt-[4rem]">
             <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
               Business Promotion
             </p>
@@ -351,7 +346,7 @@ const Services = () => {
               At iSabiTech, we help you maximize visibility & growth through
               strategic marketing solutions.
             </p>
-            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
+            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-6 mb-6">
               <p className=" font-[manrope-semibold]">Our services include:</p>
             </div>
 
@@ -373,156 +368,185 @@ const Services = () => {
               ))}
             </div>
 
-              {/* Brand Design */}
-              <div  className=" flex flex-col gap-4 ">
+            {/* Brand Design */}
+            <div className=" flex flex-col gap-4 mt-[4rem] ">
               <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
-              Brand Design
-            </p>
-            <p className=" font-[manrope-light] ">
-            We help you define your business identity with unique & impactful branding designs..
-            </p>
-            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
-              <p className=" font-[manrope-semibold]">Our services include:</p>
-            </div>
-            <div>Branding and Identity</div>
-            <div className=" flex gap-4 justify-between">
-              {brandDesign.map((item, index) => (
-                <div
-                  key={index}
-                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
-                >
-                  {/* Icon div */}
-                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
-                    {item.icon}
-                  </div>
-                  {/* Text div */}
-                  <div>
-                    <p className=" font-[manrope-regular]">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Project Management */}
-            <div  className=" flex flex-col gap-4 ">
-              <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
-              Project Management
-            </p>
-            <p className=" font-[manrope-light] ">
-            Our experienced project management team ensures that your projects are delivered on time, within budget,
-             and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process.
-            </p>
-            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
-              <p className=" font-[manrope-semibold]">Our services include:</p>
-            </div>
-            <div>Project Planning and Scoping</div>
-            <div className=" flex flex-row gap-[10rem] ">
-              {projectManagement.map((item, index) => (
-                <div
-                  key={index}
-                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
-                >
-                  {/* Icon div */}
-                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
-                    {item.icon}
-                  </div>
-                  {/* Text div */}
-                  <div>
-                    <p className=" font-[manrope-regular]">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div>
-            <div>Agile Methodology</div>
-            <div className="flex gap-4 justify-between  ">
-              {agileMethodology.map((item, index) => (
-                <div
-                  key={index}
-                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
-                >
-                  {/* Icon div */}
-                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
-                    {item.icon}
-                  </div>
-                  {/* Text div */}
-                  <div>
-                    <p className=" font-[manrope-regular]">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Social Media Management */}
-          <div className=" flex flex-col gap-4 ">
-            <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
-            Social Media Management
-            </p>
-            <p className=" font-[manrope-light] ">
-            We help in boosting your online presence with targeted social media strategies and management tools.
-            </p>
-            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
-              <p className=" font-[manrope-semibold]">Our services include:</p>
-            </div>
-
-            <div className=" flex gap-4 justify-between">
-              {businessPromotion.map((item, index) => (
-                <div
-                  key={index}
-                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
-                >
-                  {/* Icon div */}
-                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
-                    {item.icon}
-                  </div>
-                  {/* Text div */}
-                  <div>
-                    <p className=" font-[manrope-regular]">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            </div>
-
-            {/* Data Analysis */}
-          <div className=" flex flex-col gap-4 ">
-            <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
-            Data Analysis
-            </p>
-            <p className=" font-[manrope-light] ">
-            We leverage data insights to drive informed decision-making and business growth
-            </p>
-            <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-10">
-              <p className=" font-[manrope-semibold]">Our services include:</p>
-            </div>
-
-            <div className=" flex gap-4 justify-between">
-              {dataAnalysis.map((item, index) => (
-                <div
-                  key={index}
-                  className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
-                >
-                  {/* Icon div */}
-                  <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
-                    {item.icon}
-                  </div>
-                  {/* Text div */}
-                  <div>
-                    <p className=" font-[manrope-regular]">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            </div>
+                Brand Design
+              </p>
+              <p className=" font-[manrope-light] ">
+                We help you define your business identity with unique &
+                impactful branding designs..
+              </p>
+              <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-6 mb-6">
+                <p className=" font-[manrope-semibold]">
+                  Our services include:
+                </p>
               </div>
+              <div>Branding and Identity</div>
+              <div className=" flex gap-4 justify-between">
+                {brandDesign.map((item, index) => (
+                  <div
+                    key={index}
+                    className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                  >
+                    {/* Icon div */}
+                    <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                      {item.icon}
+                    </div>
+                    {/* Text div */}
+                    <div>
+                      <p className=" font-[manrope-regular]">{item.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Project Management */}
+              <div className=" flex flex-col gap-4 mt-[4rem]">
+                <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
+                  Project Management
+                </p>
+                <p className=" font-[manrope-light] ">
+                  Our experienced project management team ensures that your
+                  projects are delivered on time, within budget, and according
+                  to your specifications. We follow industry-standard
+                  methodologies and employ effective communication and
+                  collaboration tools to keep you informed throughout the
+                  development process.
+                </p>
+                <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-6 mb-6">
+                  <p className=" font-[manrope-semibold]">
+                    Our services include:
+                  </p>
+                </div>
+                <div className="mt-6 mb-6">Project Planning and Scoping</div>
+                <div className=" flex flex-row gap-[10rem] ">
+                  {projectManagement.map((item, index) => (
+                    <div
+                      key={index}
+                      className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                    >
+                      {/* Icon div */}
+                      <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                        {item.icon}
+                      </div>
+                      {/* Text div */}
+                      <div>
+                        <p className=" font-[manrope-regular]">{item.text}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div>
+                  <div className="mt-6 mb-6">Agile Methodology</div>
+                  <div className="flex gap-4 justify-between  ">
+                    {agileMethodology.map((item, index) => (
+                      <div
+                        key={index}
+                        className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                      >
+                        {/* Icon div */}
+                        <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                          {item.icon}
+                        </div>
+                        {/* Text div */}
+                        <div>
+                          <p className=" font-[manrope-regular]">{item.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Social Media Management */}
+                  <div className=" flex flex-col gap-4 mt-[4rem]">
+                    <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
+                      Social Media Management
+                    </p>
+                    <p className=" font-[manrope-light] ">
+                      We help in boosting your online presence with targeted
+                      social media strategies and management tools.
+                    </p>
+                    <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-6 mb-6">
+                      <p className=" font-[manrope-semibold]">
+                        Our services include:
+                      </p>
+                    </div>
+
+                    <div className=" flex gap-4 justify-between">
+                      {businessPromotion.map((item, index) => (
+                        <div
+                          key={index}
+                          className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                        >
+                          {/* Icon div */}
+                          <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                            {item.icon}
+                          </div>
+                          {/* Text div */}
+                          <div>
+                            <p className=" font-[manrope-regular]">
+                              {item.text}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Data Analysis */}
+                  <div className=" flex flex-col gap-4 mt-[4rem]">
+                    <p className=" font-[manrope-bold] md:text-2xl mt-6 ">
+                      Data Analysis
+                    </p>
+                    <p className=" font-[manrope-light] ">
+                      We leverage data insights to drive informed
+                      decision-making and business growth
+                    </p>
+                    <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA] mt-6 mb-6">
+                      <p className=" font-[manrope-semibold]">
+                        Our services include:
+                      </p>
+                    </div>
+
+                    <div className=" flex gap-4 justify-between">
+                      {dataAnalysis.map((item, index) => (
+                        <div
+                          key={index}
+                          className=" w-[256px] h-[160px] p-4 flex gap-4 flex-col bg-[#F5F8FA] rounded-md"
+                        >
+                          {/* Icon div */}
+                          <div className=" w-[40px] h-[40px] bg-[#EBEDEE] p-2 rounded-md  flex items-center justify-center border-2">
+                            {item.icon}
+                          </div>
+                          {/* Text div */}
+                          <div>
+                            <p className=" font-[manrope-regular]">
+                              {item.text}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-[10rem] flex flex-col items-center justify-center gap-5 mb-[7rem]">
+                    <h1 className="font-extrabold text-2xl" >Peace of Mind, Guaranteed</h1>
+                    <p className="  text-center mb-10">
+                      {" "}
+                      We offer a 12 months Free Technical Support program after
+                      the project is completed to train <br /> your staff on how to
+                      continuously manage your website.
+                    </p>
+                    <button className=" bg-[#0A4FBB] p-3 rounded-xl text-[#EBEDEE]">Contact Us Today</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      </div>
-      </div>
-
+    </div>
   );
 };
 

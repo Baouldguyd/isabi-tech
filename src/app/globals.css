@@ -1,4 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+  font-family: "manrope-light";
+  src: url("../assets/Font/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-regular";
+  src: url("../assets/Font/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-medium";
+  src: url("../assets/Font/Manrope-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-semibold";
+  src: url("../assets/Font/Manrope-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-bold";
+  src: url("../assets/Font/Manrope-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "manrope-extraBold";
+  src: url("../assets/Font/Manrope-ExtraBold.ttf") format("truetype");
+}
+body {
+  background-color: #F7F8FA;
+  font-family: "manrope-extraBold";
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #EEF2F8;
+  display: none;
+}
+::-webkit-scrollbar-track:hover {
+  display: block;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  display: none;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #096A95;
+  border-radius: 12px;
+  display: block;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

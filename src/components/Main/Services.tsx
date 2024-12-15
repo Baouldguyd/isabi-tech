@@ -208,7 +208,7 @@ const Services = () => {
   ];
 
   return (
-    <div className=" h-auto bg-[#EBEDEE] rounded-md font-[manrope-regular] w-[90%] m-auto ">
+    <div className=" h-auto mt-[4rem] bg-[#EBEDEE] rounded-md font-[manrope-regular] w-[90%] m-auto ">
       {/* Our services */}
       <div className=" h-[10rem]  p-7 flex flex-col gap-2">
         <h1 className="  font-[manrope-extraBold] text-center text-[30px]  font-bold  ">

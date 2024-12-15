@@ -8,7 +8,7 @@ import Contact from "./Contact";
 
 const Main = () => {
   return (
-    <div>
+    <div className=" flex flex-col gap-2">
       <HeroPage />
       <Services />
       <AboutUs/>

@@ -25,6 +25,14 @@ const Contact = () => {
       id: "Data Analysis",
     },
   ];
+  const budget = [
+    "100,000",
+    "200,000",
+    "500,000",
+    "1,000,000",
+    "2,000,000",
+    "5,000,000+",
+  ];
   return (
     <div className="font-[manrope-regular] mt-20 w-[90%]  m-auto">
       {/* header */}
@@ -37,9 +45,9 @@ const Contact = () => {
         </p>
       </div>
       {/* form */}
-      <div className=" h-[1367px] bg-[#EBEDEE]  rounded-lg p-10">
+      <div className=" h-auto bg-[#EBEDEE]  rounded-lg p-10">
         <form action="" className=" flex flex-col gap-12">
-          <span className=" h-[10rem]  w-[100%] flex justify-between px-4">
+          <span className=" h-[10rem]  w-[100%] gap-4 flex justify-between px-4">
             <span className=" flex flex-col w-[45%] gap-8">
               <label htmlFor="" className="font-bold">
                 Full Name
@@ -57,6 +65,16 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Enter email"
+                className=" h-[72px] rounded-md pl-5"
+              />
+            </span>
+            <span className=" flex flex-col w-[45%] gap-8">
+              <label htmlFor="" className="font-bold">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                placeholder="Enter phone number"
                 className=" h-[72px] rounded-md pl-5"
               />
             </span>
@@ -83,18 +101,61 @@ const Contact = () => {
             </span>
           </span>
           {/* Budget */}
-          <span  className="flex flex-col pl-4 ">
+          <span className="flex flex-col pl-4 gap-4 mt-10 mb-10">
             <span className=" flex flex-col gap-3">
-                <p className=" font-bold">
-                Budgeting Options   
-                </p>
-                <p>
-                Slide to indicate your budget range   
-                </p>
+              <p className=" font-bold">Budgeting Options</p>
+              <p>Slide to indicate your budget range</p>
             </span>
-
+            <div className="w-full mt-4 h-[1px] flex justify-around bg-black">
+              {budget.map((budget) => (
+                <span className="mt-2 font-semibold">{budget}</span>
+              ))}
+            </div>
+          </span>
+          {/* Message */}
+          <span className=" flex flex-col gap-4">
+            <label htmlFor="" className="font-bold">
+              Your Message
+            </label>
+            <textarea
+              name=""
+              id=""
+              placeholder="Enter message here..."
+              className="h-[14rem] rounded-md pl-5 pt-4"
+            ></textarea>
+          </span>
+          <span className=" flex justify-end">
+            <button
+              type="submit"
+              className=" bg-[#0A4FBB] px-[20px] py-[16px]  text-[#EBEDEE] rounded-lg"
+            >
+              Submit
+            </button>
           </span>
         </form>
+      </div>
+      <div className=" h-auto bg-[#EBEDEE] mt-8 rounded-lg p-10">
+        <span className=" flex flex-col gap-4">
+        <p className=" text-2xl font-bold">Stay Updated!</p>
+        <p>
+          Subscribe to our Newsletter for the latest industry insights and
+          updates.
+        </p>
+        </span>
+
+        <span className="flex justify-between mt-8">
+          <input
+            type="email"
+            placeholder="Enter email"
+            className="w-[50%] pl-4 p-4 rounded-md"
+          />
+          <button
+            type="submit"
+            className=" bg-[#0A4FBB] px-[20px] py-[16px]  text-[#EBEDEE] rounded-lg"
+          >
+            Subscribe
+          </button>
+        </span>
       </div>
     </div>
   );

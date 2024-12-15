@@ -1,14 +1,14 @@
 import ArrowRightIcon from "@/assets/ArrowRightIcon";
 import DotIcon from "@/assets/Icon/DotIcon";
 import Image from "next/image";
-import brainImage from "@/assets/Logo/brain.svg"
-
+import brainImage from "@/assets/Logo/brain.svg";
+import Slider from "./Slider";
 
 const HeroPage = () => {
   const services = [
     {
       name: "WEBSITE DEVELOPMENT",
-      link : ""
+      link: "",
     },
     {
       name: "MOBILE APP DEVELOPMENT",
@@ -54,22 +54,19 @@ const HeroPage = () => {
             </div>
           </div>
 
-          <div className=" flex justify-around items-center gap-3 h-[56px] w-[97%] bg-[#F5F8FA] mt-28 ml-5">
-            {services.map((item, index) => (
-              <span key={index} className=" flex gap-2 items-center justify-center">
-                <span className=" w-[10px] h-[10px] bg-[#0A4FBB] rounded-full"><DotIcon/></span>
-                <span className=" text-[#59595A] font-[manrope-semibold]">{item.name}</span>
-              </span>
-            ))}
+          <div className=" w-[50rem]">
+            <Slider />
           </div>
+
+          
         </div>
 
         {/* image container */}
         <div className="  h-full  rounded-md ">
           <Image
-          alt="Brain Image"
-          src={brainImage}
-          className=" w-[100%] h-[100%]"
+            alt="Brain Image"
+            src={brainImage}
+            className=" w-[100%] h-[100%]"
           />
         </div>
       </div>

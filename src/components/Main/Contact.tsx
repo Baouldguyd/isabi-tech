@@ -39,7 +39,7 @@ const Contact = () => {
       <div className=" flex flex-col gap-6 justify-center items-center mb-10  ">
         <p className="font-bold text-2xl">Have an Idea or a Business?</p>
         <p className=" w-[35%] text-center ">
-          Whether you're starting fresh or expanding your business, we're here
+          Whether you&apos;re starting fresh or expanding your business, we&apos;re here
           to help. If you want to publish your idea through a website, contact
           us today!
         </p>
@@ -107,8 +107,8 @@ const Contact = () => {
               <p>Slide to indicate your budget range</p>
             </span>
             <div className="w-full mt-4 h-[1px] flex justify-around bg-black">
-              {budget.map((budget) => (
-                <span className="mt-2 font-semibold">{budget}</span>
+              {budget.map((budget, index) => (
+                <span className="mt-2 font-semibold" key={index}>{budget}</span>
               ))}
             </div>
           </span>

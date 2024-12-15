@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "@/assets/Logo/Logo.png";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -34,11 +35,8 @@ const AboutUs = () => {
         <div className=" w-[443px] h-[380px]  rounded-xl">
           {/* <div className=" w-[70px] h-[70px] bg-[#EBEDEE] rounded-md flex justify-center items-center">
       </div> */}
-          <img
-            alt="logo"
-            className="w-[70%] h-full"
-            src="https://res.cloudinary.com/dxjjjt3zt/image/upload/v1734255427/og06z5b25kthhwpsypla.jpg"
-          />
+          
+          <Image alt="logo"   className="w-[70%] h-full" src={"https://res.cloudinary.com/dxjjjt3zt/image/upload/v1734255427/og06z5b25kthhwpsypla.jpg"}/>
         </div>
       </div>
     </div>

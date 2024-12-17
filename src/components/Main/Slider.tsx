@@ -9,7 +9,7 @@ const services = [
 
 export default function Slider() {
   return (
-    <div className="relative overflow-hidden h-[56px] w-full bg-[#F5F8FA] mt-28 ml-5">
+    <div className="relative overflow-hidden h-[56px] md:w-full w-[65vw] rounded-md bg-[#F5F8FA] mt-28 ml-5">
       <motion.div
         className="flex justify-start items-center gap-8"
         animate={{

@@ -22,10 +22,11 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className=" h-[70svh] w-[90%] m-auto  ">
-      <div className="  h-[80%] w-[100%]  grid grid-cols-[1fr_30rem] p-4 gap-4">
+    <div className=" md:h-[70svh] h-auto w-[90%] m-auto  ">
+      <div className="  h-[80%] md:w-[100%] w-[90%] mx-auto  md:grid md:grid-cols-[1fr_30rem] p-4 md:gap-4  gap-8">
         {/* call to action */}
-        <div className="bg-[#EBEDEE] h-full rounded-md">
+
+        <div className="bg-[#EBEDEE] md:h-full h-[40rem] rounded-md flex flex-col relative " >
           {/* Header */}
           <div className=" flex justify-center items-center md:mt-8 flex-col gap-4 p-10">
             <p className="  text-3xl w-[70%] m-auto text-center font-[manrope-bold]">
@@ -54,15 +55,12 @@ const HeroPage = () => {
             </div>
           </div>
 
-          <div className=" w-[50rem]">
+          <div className=" h-[5rem] absolute bottom-0 top-[-5]  mb-[10rem] mx-auto md:w-[95%]  ">
             <Slider />
           </div>
-
-          
         </div>
-
         {/* image container */}
-        <div className="  h-full  rounded-md ">
+        <div className="  md:h-full h-[380px] md:w-[368px]    rounded-md ">
           <Image
             alt="Brain Image"
             src={brainImage}

@@ -228,20 +228,20 @@ const Services = () => {
             Website Development
           </p>
           <p className=" font-[manrope-light] ">
-            At iSabiTech, our web development team is dedicated to crafting
+            At iSabi Tech, our web development team is dedicated to crafting
             visually stunning & functional websites tailored to your needs. We
             leverage the latest technologies and best practices to deliver
             high-performance applications tailored to your specific needs.
           </p>
           {/* Our Services */}
-          <div className=" mt-6 gap-12 flex flex-col">
+          <div className=" mt-6 gap-12 flex flex-col ">
             <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA]">
               <p className=" font-[manrope-semibold]">Our services include:</p>
             </div>
             {/* User Experience */}
             <span className=" flex flex-col  gap-8">
               <p>User Experience (UX) Design</p>
-              <div className=" flex gap-4 justify-between">
+              <div className=" flex gap-4 md:justify-between md:flex-row flex-col ">
                 {userExp.map((item, index) => (
                   <div
                     key={index}
@@ -262,7 +262,7 @@ const Services = () => {
             {/* User Interface */}
             <span className=" flex flex-col gap-8">
               <p>User Interface (UI) Design</p>
-              <div className=" flex gap-4 justify-between">
+              <div className=" flex gap-4 justify-between md:flex-row flex-col">
                 {userInter.map((item, index) => (
                   <div
                     key={index}
@@ -285,7 +285,7 @@ const Services = () => {
 
             <span className=" flex flex-col gap-8">
               <p> Development</p>
-              <div className=" flex gap-[10rem] justify-start">
+              <div className=" flex gap-[10rem] justify-start flex-wrap md:flex-row flex-col">
                 {development.map((item, index) => (
                   <div
                     key={index}
@@ -319,7 +319,7 @@ const Services = () => {
           <div className=" h-[2.5rem] w-[12rem] rounded-md p-2 bg-[#F5F8FA]  mt-6 mb-6">
             <p className=" font-[manrope-semibold]">Our services include:</p>
           </div>
-          <div className=" flex gap-4 justify-between">
+          <div className=" flex gap-4 justify-between md:flex-row flex-col">
             {appDevelopment.map((item, index) => (
               <div
                 key={index}
@@ -350,7 +350,7 @@ const Services = () => {
               <p className=" font-[manrope-semibold]">Our services include:</p>
             </div>
 
-            <div className=" flex gap-4 justify-between">
+            <div className=" flex gap-4 justify-between md:flex-row flex-col ">
               {businessPromotion.map((item, index) => (
                 <div
                   key={index}
@@ -383,7 +383,7 @@ const Services = () => {
                 </p>
               </div>
               <div>Branding and Identity</div>
-              <div className=" flex gap-4 justify-between">
+              <div className=" flex gap-4 justify-between md:flex-row flex-col">
                 {brandDesign.map((item, index) => (
                   <div
                     key={index}
@@ -420,7 +420,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="mt-6 mb-6">Project Planning and Scoping</div>
-                <div className=" flex flex-row gap-[10rem] ">
+                <div className=" flex gap-[10rem] md:flex-row flex-col ">
                   {projectManagement.map((item, index) => (
                     <div
                       key={index}
@@ -440,7 +440,7 @@ const Services = () => {
 
                 <div>
                   <div className="mt-6 mb-6">Agile Methodology</div>
-                  <div className="flex gap-4 justify-between  ">
+                  <div className="flex gap-4 justify-between md:flex-row flex-col ">
                     {agileMethodology.map((item, index) => (
                       <div
                         key={index}
@@ -473,7 +473,7 @@ const Services = () => {
                       </p>
                     </div>
 
-                    <div className=" flex gap-4 justify-between">
+                    <div className=" flex gap-4 justify-between md:flex-row flex-col">
                       {businessPromotion.map((item, index) => (
                         <div
                           key={index}
@@ -509,7 +509,7 @@ const Services = () => {
                       </p>
                     </div>
 
-                    <div className=" flex gap-4 justify-between">
+                    <div className=" flex gap-4 justify-between md:flex-row flex-col ">
                       {dataAnalysis.map((item, index) => (
                         <div
                           key={index}

@@ -22,10 +22,10 @@ const Project = () => {
     },
   ];
   return (
-    <div className="mt-[5rem] font-[manrope-regular] w-[90%]  m-auto">
+    <div className="mt-[5rem] font-[manrope-regular] md:w-[90%] px-4 m-auto">
       {/* success stories */}
       <div>
-        <p className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] ">
+        <p className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] text-[1.5rem] ">
           Success Stories: Our Work in Action
         </p>
         <p className="  text-center mb-[4rem]">
@@ -34,10 +34,10 @@ const Project = () => {
         </p>
       </div>
       {/* success cards */}
-      <div className=" flex gap-2 justify-between">
+      <div className=" flex gap-2 justify-between md:flex-row flex-col ">
         {/* card */}
         {client.map((item, index) => (
-          <div key={index} className="w-[413px] h-[426px] bg-[#0A4FBB] rounded-xl flex relative ">
+          <div key={index} className="md:w-[413px] w-full h-[426px] bg-[#0A4FBB] rounded-xl flex relative ">
             {/* clients */}
             <div className=" bg-[#F5F8FA] p-6 h-[90px] flex justify-between w-[90%] m-auto border-4 border-[#EEF3F6] rounded-md absolute bottom-4 left-5">
               {/* client details */}

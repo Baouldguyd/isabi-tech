@@ -32,12 +32,12 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className=" flex justify-end">
+        <div className=" flex justify-end relative md:hidden">
           <button className="" onClick={() => setIsOpen(!isOpen)}>
             <HamburgerIcon />
           </button>
           {isOpen && (
-            <div>
+            <div className=" absolute top-20 rounded-md  bg-white w-[10rem] h-auto p-4 ">
               <ul className="flex flex-col gap-y-5">
                 <li>Home</li>
                 <li>Services</li>

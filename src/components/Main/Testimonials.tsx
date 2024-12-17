@@ -26,10 +26,10 @@ const Testimonials = () => {
       }
   ];
   return (
-    <div className="mt-[5rem] font-[manrope-regular] w-[90%]  m-auto">
+    <div className="mt-[5rem] font-[manrope-regular] md:w-[90%] px-4  m-auto">
       {/* Testimonials */}
       <div>
-        <p className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] ">
+        <p className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] text-[1.5rem]">
           Testimonials From Clients
         </p>
         <p className="  text-center mb-[4rem]">
@@ -38,10 +38,10 @@ const Testimonials = () => {
         </p>
       </div>
 
-      <div className=" flex  justify-between">
+      <div className=" flex  justify-between md:flex-row flex-col gap-4">
         {testimonials.map((item, index) =>(
             
-            <div key={index} className=" w-[370px] h-[266px]  flex flex-col border-[2px] border-[#FFFFFF] rounded-lg">
+            <div key={index} className=" md:w-[370px] w-full h-[266px]  flex flex-col border-[2px] border-[#FFFFFF] rounded-lg">
               {/* Profile */}
               <div className=" h-[40%]  px-6 flex justify-between items-center gap-5 ">
                 <div className=" flex gap-2">

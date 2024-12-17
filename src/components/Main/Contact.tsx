@@ -34,21 +34,21 @@ const Contact = () => {
     "5,000,000+",
   ];
   return (
-    <div className="font-[manrope-regular] mt-20 w-[90%]  m-auto">
+    <div className="font-[manrope-regular] mt-20 md:w-[90%] px-4  m-auto">
       {/* header */}
       <div className=" flex flex-col gap-6 justify-center items-center mb-10  ">
         <p className="font-bold text-2xl">Have an Idea or a Business?</p>
-        <p className=" w-[35%] text-center ">
+        <p className=" md:w-[35%] text-center w-full">
           Whether you&apos;re starting fresh or expanding your business, we&apos;re here
           to help. If you want to publish your idea through a website, contact
           us today!
         </p>
       </div>
       {/* form */}
-      <div className=" h-auto bg-[#EBEDEE]  rounded-lg p-10">
+      <div className=" md:h-auto bg-[#EBEDEE]  rounded-lg p-10 ">
         <form action="" className=" flex flex-col gap-12">
-          <span className=" h-[10rem]  w-[100%] gap-4 flex justify-between px-4">
-            <span className=" flex flex-col w-[45%] gap-8">
+          <span className=" h-[10rem]  w-[100%] gap-4 flex justify-between px-4 md:flex-row flex-col">
+            <span className=" flex flex-col md:w-[45%] w-full gap-8">
               <label htmlFor="" className="font-bold">
                 Full Name
               </label>
@@ -58,7 +58,7 @@ const Contact = () => {
                 className=" h-[72px] rounded-md pl-5"
               />
             </span>
-            <span className=" flex flex-col w-[45%] gap-8">
+            <span className=" flex flex-col md:w-[45%] w-full gap-8">
               <label htmlFor="" className="font-bold">
                 Email
               </label>
@@ -68,7 +68,7 @@ const Contact = () => {
                 className=" h-[72px] rounded-md pl-5"
               />
             </span>
-            <span className=" flex flex-col w-[45%] gap-8">
+            <span className=" flex flex-col md:w-[45%] w-full gap-8">
               <label htmlFor="" className="font-bold">
                 Phone Number
               </label>
@@ -80,11 +80,11 @@ const Contact = () => {
             </span>
           </span>
           {/* Contact us */}
-          <span className="flex flex-col gap-6 pl-[1rem]">
+          <div className="flex flex-col gap-6 pl-[1rem] mt-[14rem] md:mt-0.5 ">
             <span>
               <p className="font-bold">Why are you contacting us?</p>
             </span>
-            <span className=" flex flex-wrap  justify-between">
+            <span className=" flex md:flex-wrap  justify-between md:flex-row flex-col">
               {contactUs.map((item, index) => (
                 <span className=" flex gap-4 mt-8  w-[32%]" key={index}>
                   <input
@@ -99,9 +99,9 @@ const Contact = () => {
                 </span>
               ))}
             </span>
-          </span>
+          </div>
           {/* Budget */}
-          <span className="flex flex-col pl-4 gap-4 mt-10 mb-10">
+          <span className="md:flex flex-col pl-4 gap-4 mt-10 mb-10 hidden">
             <span className=" flex flex-col gap-3">
               <p className=" font-bold">Budgeting Options</p>
               <p>Slide to indicate your budget range</p>

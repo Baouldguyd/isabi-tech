@@ -7,8 +7,9 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className=" grid grid-rows-[7rem_1fr_3rem]">
+    <div className=" grid grid-rows-[7rem_1fr_3rem] w-[100vw]">
       <Header />
+
       <Main />
       <Footer />
     </div>

@@ -22,11 +22,10 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className=" md:h-[70svh] h-auto w-[90%] m-auto  ">
+    <div className=" md:h-[70svh] h-auto md:w-[90%] m-auto w-full  ">
       <div className="  h-[80%] md:w-[100%] w-[90%] mx-auto  md:grid md:grid-cols-[1fr_30rem] p-4 md:gap-4  gap-8">
         {/* call to action */}
-
-        <div className="bg-[#EBEDEE] md:h-full h-[40rem] rounded-md flex flex-col relative " >
+        <div className="bg-[#EBEDEE] md:h-full h-[40rem] rounded-md flex flex-col  ">
           {/* Header */}
           <div className=" flex justify-center items-center md:mt-8 flex-col gap-4 p-10">
             <p className="  text-3xl w-[70%] m-auto text-center font-[manrope-bold]">
@@ -55,8 +54,8 @@ const HeroPage = () => {
             </div>
           </div>
 
-          <div className=" h-[5rem] absolute bottom-0 top-[-5]  mb-[10rem] mx-auto md:w-[95%]  ">
-            <Slider />
+          <div className=" h-[5rem] mt-6 relative ">
+            <div className=" absolute top-[-10] bottom-5  mx-auto md:w-[95%] w-full"><Slider /></div>
           </div>
         </div>
         {/* image container */}

@@ -4,22 +4,22 @@ import React from "react";
 const Testimonials = () => {
   const testimonials = [
     {
-      image: "",
+      image: "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg",
       name: "John Doe",
       type: "CEO, XYZ Company",
       statement:
         "Isabi Technologies exceeded our expectations! Their dedication and expertise helped us reach new heights in our online presence.",
     },
     {
-        image: "",
+        image: "https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.jpg?s=612x612&w=0&k=20&c=tyLvtzutRh22j9GqSGI33Z4HpIwv9vL_MZw_xOE19NQ=",
         name: "Jane Smith",
         type: "Founder, ABC Inc.",
         statement:
           "Isabi Technologies exceeded our expectations!. Working with Isabi was a game-changer! Their creativity and professionalism set them apart from the rest.",
       },
       {
-        image: "",
-        name: "John Doe",
+        image: "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+        name: "Patrick Brown",
         type: "CEO, XYZ Company",
         statement:
           "Isabi Technologies exceeded our expectations! Their dedication and expertise helped us reach new heights in our online presence.",
@@ -46,8 +46,8 @@ const Testimonials = () => {
               <div className=" h-[40%]  px-6 flex justify-between items-center gap-5 ">
                 <div className=" flex gap-2">
                   {/* image */}
-                  <span className="w-[50px] h-[50px] rounded-full bg-[#87A1CA]">
-                    img
+                  <span className="w-[50px] h-[50px] rounded-full ">
+                    <img src={item.image} alt="profile" className="w-full h-full rounded-full" />
                   </span>
                   {/* name */}
                   <span>

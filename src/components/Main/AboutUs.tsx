@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "@/assets/Logo/Logo.png";
-import Image from "next/image";
+// import Logo from "@/assets/Logo/Logo.png";
+// import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -33,9 +33,8 @@ const AboutUs = () => {
         </div>
         {/* image content */}
         <div className=" md:w-[443px] h-[380px]  rounded-xl">
-       
-          
-          <Image alt="logo" width={70} height={100}  className="w-[70%] h-full m-auto" src={"https://res.cloudinary.com/dxjjjt3zt/image/upload/v1734255427/og06z5b25kthhwpsypla.jpg"} />
+         
+          <img alt="logo" width={70} height={100}  className="w-[70%] h-full m-auto" src="https://res.cloudinary.com/dxjjjt3zt/image/upload/v1734255427/og06z5b25kthhwpsypla.jpg" />
         </div>
       </div>
     </div>

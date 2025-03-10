@@ -49,7 +49,7 @@ body {
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #096A95;
+  background: #0A4FBB;
   border-radius: 12px;
   display: block;
 }
@@ -60,3 +60,14 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+button:hover {
+  background: linear-gradient(to right, white  50%, #0A4FBB 50%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  background-color: white;
+  color: #0A4FBB;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in, background-position 0.5s ease-in;
+  background-position: 0 100%;
+}
+

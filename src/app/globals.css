@@ -1,73 +1,225 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 @font-face {
   font-family: "manrope-light";
   src: url("../assets/Font/Manrope-Light.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "manrope-regular";
   src: url("../assets/Font/Manrope-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "manrope-medium";
   src: url("../assets/Font/Manrope-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "manrope-semibold";
   src: url("../assets/Font/Manrope-SemiBold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "manrope-bold";
   src: url("../assets/Font/Manrope-Bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "manrope-extraBold";
   src: url("../assets/Font/Manrope-ExtraBold.ttf") format("truetype");
 }
+
+:root {
+  --primary-color: #0A4FBB;
+  --primary-hover: #0945a0;
+  --secondary-color: #EBEDEE;
+  --accent-color: #F5F8FA;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --background-light: #F7F8FA;
+  --background-dark: #EEF2F8;
+  --white: #FFFFFF;
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+}
+
+/* Dark mode variables */
+.dark {
+  --primary-color: #4A90E2;
+  --primary-hover: #3A7BC8;
+  --secondary-color: #2D3748;
+  --accent-color: #4A5568;
+  --text-dark: #E2E8F0;
+  --text-light: #CBD5E0;
+  --background-light: #1A202C;
+  --background-dark: #2D3748;
+  --white: #1A202C;
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.4);
+  --shadow-dark: 0 20px 25px rgba(0, 0, 0, 0.5);
+}
+
 body {
-  background-color: #F7F8FA;
-  font-family: "manrope-extraBold";
+  background-color: var(--background-light);
+  font-family: "manrope-regular", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* width */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "manrope-bold", sans-serif;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "manrope-extraBold", sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
 }
-/* Track */
+
 ::-webkit-scrollbar-track {
-  background: #EEF2F8;
-  display: none;
+  background: var(--background-dark);
+  border-radius: 4px;
 }
-::-webkit-scrollbar-track:hover {
-  display: block;
-}
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  display: none;
+  background: var(--primary-color);
+  border-radius: 4px;
 }
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #0A4FBB;
-  border-radius: 12px;
-  display: block;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  background: var(--primary-hover);
 }
 
-button:hover {
-  background: linear-gradient(to right, white  50%, #0A4FBB 50%);
-  background-size: 200% 100%;
-  background-position: 0 0;
-  background-color: white;
-  color: #0A4FBB;
-  transition: background-color 0.5s ease-in, color 0.5s ease-in, background-position 0.5s ease-in;
-  background-position: 0 100%;
+/* Utility classes */
+.shadow-light {
+  box-shadow: var(--shadow-light);
 }
 
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
+}
+
+.shadow-dark {
+  box-shadow: var(--shadow-dark);
+}
+
+.rounded-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--border-radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-sm);
+  font-family: "manrope-semibold", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Focus styles for accessibility */
+button:focus, a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Dark mode specific styles */
+.dark .bg-white {
+  background-color: #2D3748;
+}
+
+.dark .text-gray-800 {
+  color: #E2E8F0;
+}
+
+.dark .text-gray-600 {
+  color: #CBD5E0;
+}
+
+.dark .bg-gray-100 {
+  background-color: #4A5568;
+}
+
+.dark .border-gray-100 {
+  border-color: #4A5568;
+}
+
+.dark .border-gray-200 {
+  border-color: #2D3748;
+}

@@ -1,5 +1,6 @@
 import Star from "@/assets/Icon/Star";
 import React from "react";
+import Image from "next/image";
 
 const Testimonials = () => {
   const testimonials = [
@@ -26,39 +27,39 @@ const Testimonials = () => {
       }
   ];
   return (
-    <div className="mt-[5rem] font-[manrope-regular] md:w-[90%] px-4  m-auto">
+    <div className="mt-[5rem] font-[manrope-regular] md:w-[90%] px-4 m-auto">
       {/* Testimonials */}
       <div>
-        <p className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] text-[1.5rem]">
+        <h2 className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] text-[1.5rem]">
           Testimonials From Clients
-        </p>
-        <p className="  text-center mb-[4rem]">
+        </h2>
+        <p className="text-center mb-[4rem]">
           Take a look at what our satisfied clients has to say by collaborating
           with us to empower their business potential.
         </p>
       </div>
 
-      <div className=" flex  justify-between md:flex-row flex-col gap-4">
+      <div className="flex justify-between md:flex-row flex-col gap-4">
         {testimonials.map((item, index) =>(
             
-            <div key={index} className=" md:w-[370px] w-full h-[266px]  flex flex-col border-[2px] border-[#FFFFFF] rounded-lg">
+            <div key={index} className="md:w-[370px] w-full h-[266px] flex flex-col border-[2px] border-[#FFFFFF] rounded-lg">
               {/* Profile */}
-              <div className=" h-[40%]  px-6 flex justify-between items-center gap-5 ">
-                <div className=" flex gap-2">
+              <div className="h-[40%] px-6 flex justify-between items-center gap-5">
+                <div className="flex gap-2">
                   {/* image */}
-                  <span className="w-[50px] h-[50px] rounded-full ">
-                    <img src={item.image} alt="profile" className="w-full h-full rounded-full" />
+                  <span className="w-[50px] h-[50px] rounded-full overflow-hidden">
+                    <Image src={item.image} alt={`Profile picture of ${item.name}`} width={50} height={50} className="w-full h-full rounded-full object-cover" />
                   </span>
                   {/* name */}
                   <span>
-                    <p className=" text-[16px] font-bold">{item.name}</p>
+                    <p className="text-[16px] font-bold">{item.name}</p>
                     {/* type */}
-                    <p className=" text-[14px]">{item.type}</p>
+                    <p className="text-[14px]">{item.type}</p>
                   </span>
                 </div>
     
                 {/* star */}
-                <span className=" flex justify-between gap-1">
+                <span className="flex justify-between gap-1" role="img" aria-label="5 out of 5 stars">
                   <Star />
                   <Star />
                   <Star />
@@ -67,7 +68,7 @@ const Testimonials = () => {
                 </span>
               </div>
               {/* Testimonial statement */}
-              <div className="h-[60%]  my-auto px-6 pt-8">
+              <div className="h-[60%] my-auto px-6 pt-8">
                 <p className="w-[95%] text-sm">
                 {item.statement}
                 </p>
@@ -77,8 +78,8 @@ const Testimonials = () => {
          
         ))}
       </div>
-      <div className=" flex justify-center mt-[5rem] ">
-    <button className=" bg-[#0A4FBB] px-[20px] py-[16px]  text-[#EBEDEE] rounded-lg">View All Testimonials</button>
+      <div className="flex justify-center mt-[5rem]">
+        <a href="#" className="bg-[#0A4FBB] px-[20px] py-[16px] text-[#EBEDEE] rounded-lg inline-block hover:bg-[#0945a0] transition-colors">View All Testimonials</a>
       </div>
     </div>
   );

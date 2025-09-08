@@ -1,42 +1,64 @@
 import React from "react";
-// import Logo from "@/assets/Logo/Logo.png";
-// import Image from "next/image";
+import Image from "next/image";
+import CompanyTimeline from "./CompanyTimeline";
+import TeamShowcase from "./TeamShowcase";
 
 const AboutUs = () => {
   return (
-    <div className=" mt-[5rem] font-[manrope-regular] md:w-[90%]  m-auto">
+    <div className="mt-16 font-[manrope-regular] w-full max-w-7xl mx-auto px-4">
       {/* header */}
-      <p className=" text-center font-extrabold md:text-[1.5rem] mb-[1rem] text-[1.5rem] ">
-        About iSabi Technologies
-      </p>
-      <p className=" text-center mb-[4rem]">
-        {" "}
-        We offer a 12 months Free Technical Support program after the project is
-        completed to train your staff on how to continuously manage your
-        website.
-      </p>
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+          About iSabi Technologies
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+          We offer a 12 months Free Technical Support program after the project is
+          completed to train your staff on how to continuously manage your
+          website.
+        </p>
+      </div>
+      
       {/* content */}
-      <div className=" flex gap-2 justify-between md:flex-row flex-col ">
+      <div className="flex gap-8 justify-between md:flex-row flex-col items-center mb-16">
         {/* text content */}
-        <div className=" flex flex-col gap-4 h-[50%] w-[90%] md:w-[50%] m-auto ">
-          <p className="md:w-[82%] md:text-left text-center ">
+        <div className="flex flex-col gap-6 h-auto w-full md:w-1/2">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             Isabi Technologies began with a vision to empower businesses through
             innovation and dedication. Our mission is to embody the &lsquo;I
-            Can&lsquo;spirit, delivering exceptional services that elevate your
+            Can&lsquo; spirit, delivering exceptional services that elevate your
             brand.
           </p>
-          <p className="md:w-[82%] md:text-left text-center ">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             At Isabi, we pride ourselves on our commitment to excellence,
             creativity, and client satisfaction. Our team of experts thrives on
             transforming challenges into opportunities.
           </p>
+          <div className="mt-6">
+            <a 
+              href="#contact" 
+              className="btn btn-primary inline-block"
+            >
+              Get In Touch
+            </a>
+          </div>
         </div>
         {/* image content */}
-        <div className=" md:w-[443px] h-[380px]  rounded-xl">
-         
-          <img alt="logo" width={70} height={100}  className="w-[70%] h-full m-auto" src="https://res.cloudinary.com/dxjjjt3zt/image/upload/v1734255427/og06z5b25kthhwpsypla.jpg" />
+        <div className="md:w-[443px] h-[380px] rounded-xl overflow-hidden shadow-medium flex items-center justify-center">
+          <Image 
+            alt="Office team at iSabi Technologies" 
+            width={400} 
+            height={380} 
+            className="w-full h-full object-cover" 
+            src="https://res.cloudinary.com/dxjjjt3zt/image/upload/v1734255427/og06z5b25kthhwpsypla.jpg" 
+          />
         </div>
       </div>
+      
+      {/* Company Timeline */}
+      <CompanyTimeline />
+      
+      {/* Team Showcase */}
+      <TeamShowcase />
     </div>
   );
 };

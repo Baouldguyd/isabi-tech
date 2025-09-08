@@ -25,36 +25,35 @@ const Project = () => {
     <div className="mt-[5rem] font-[manrope-regular] md:w-[90%] px-4 m-auto">
       {/* success stories */}
       <div>
-        <p className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] text-[1.5rem] ">
+        <h2 className="text-center font-extrabold md:text-[1.5rem] mb-[0.7rem] text-[1.5rem]">
           Success Stories: Our Work in Action
-        </p>
-        <p className="  text-center mb-[4rem]">
+        </h2>
+        <p className="text-center mb-[4rem]">
           Discover a portfolio of visually stunning and strategically crafted
           past digital projects that showcase our creativity and expertise.
         </p>
       </div>
       {/* success cards */}
-      <div className=" flex gap-2 justify-between md:flex-row flex-col ">
+      <div className="flex gap-6 justify-between md:flex-row flex-col items-center">
         {/* card */}
         {client.map((item, index) => (
-          <div key={index} className="md:w-[413px] w-full h-[426px] bg-[#0A4FBB] rounded-xl flex relative ">
+          <div key={index} className="md:w-[413px] w-full h-[426px] bg-[#0A4FBB] rounded-xl flex relative">
             {/* clients */}
-            <div className=" bg-[#F5F8FA] p-6 h-[90px] flex justify-between w-[90%] m-auto border-4 border-[#EEF3F6] rounded-md absolute bottom-4 left-5">
+            <div className="bg-[#F5F8FA] p-6 h-[90px] flex justify-between w-[90%] m-auto border-4 border-[#EEF3F6] rounded-md absolute bottom-4 left-1/2 transform -translate-x-1/2">
               {/* client details */}
-              <span className="h-full my-auto ">
-                <p className=" font-bold text-[0.9rem]">{item.name}</p>
-                <p className=" font-semibold text-[0.8rem]">{item.type}</p>
+              <span className="h-full my-auto">
+                <p className="font-bold text-[0.9rem]">{item.name}</p>
+                <p className="font-semibold text-[0.8rem]">{item.type}</p>
               </span>
-              <span className="w-[32.5px] h-[32.5px] my-auto flex items-center justify-center rounded-full bg-[#0A4FBB]">
+              <span className="w-[32.5px] h-[32.5px] my-auto flex items-center justify-center rounded-full bg-[#0A4FBB]" role="img" aria-label="View project details">
                 <ArrowRightIcon />
               </span>
             </div>
           </div>
         ))}
-
       </div>
-      <div className=" flex justify-center mt-[5rem] ">
-    <button className=" bg-[#0A4FBB] p-[16px] text-[#EBEDEE] rounded-lg">View All Projects</button>
+      <div className="flex justify-center mt-[5rem]">
+        <a href="#" className="bg-[#0A4FBB] p-[16px] text-[#EBEDEE] rounded-lg inline-block hover:bg-[#0945a0] transition-colors">View All Projects</a>
       </div>
     </div>
   ); 

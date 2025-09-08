@@ -9,37 +9,45 @@ const Footer = () => {
   const year = date.getFullYear();
 
   return (
-    <div className=" w-[90%] flex flex-col  m-auto md:h-[10rem] h-auto gap-10 md:gap-0">
-      <div className=" h-[100%]  flex md:flex-row flex-col  md:items-center font-[manrope-regular]">
-      <div className=" flex md:justify-between md:w-full  px-6 md:flex-row gap-10 md:gap-0 flex-col">
-        {/* Logo */}
-        <div className=" w-[70px] h-[70px] bg-[#EBEDEE] my-auto rounded-md flex justify-center items-center mx-auto md:mx-0">
-          <Image src={Logo} alt="Isabi Tech Logo"  />
-        </div>
-        {/* Nav Link */}
-        <div className="  flex gap-x-40md:items-center  md:flex-row flex-col gap-10 md:gap-0">
-          <ul className=" flex space-x-10 flex-wrap ">
-            <li>Home</li>
-            <li>Services</li>
-            <li>About Us</li>
-            <li>Portfolio</li>
-            <li>Join us</li>
-          </ul>
-          {/* Contact Button */}
-          <div className=" flex mx-auto gap-4 ">
-            <p>Stay connected with us</p>
-            <Image src={facebook} alt="Facebook Logo" />
-            <Image src={linkedin} alt="Linkedin logo" />
+    <footer className="w-full bg-white border-t border-gray-200 py-8 md:py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
+          {/* Logo */}
+          <div className="w-[70px] h-[70px] bg-[#EBEDEE] rounded-lg flex justify-center items-center">
+            <Image src={Logo} alt="Isabi Tech Logo" width={50} height={50} />
+          </div>
+          
+          {/* Nav Links */}
+          <nav className="flex flex-wrap justify-center gap-6 md:gap-8" aria-label="Footer navigation">
+            <a href="#" className="hover:text-[#0A4FBB] transition-colors font-medium">Home</a>
+            <a href="#services" className="hover:text-[#0A4FBB] transition-colors font-medium">Services</a>
+            <a href="#about" className="hover:text-[#0A4FBB] transition-colors font-medium">About Us</a>
+            <a href="#portfolio" className="hover:text-[#0A4FBB] transition-colors font-medium">Portfolio</a>
+            <a href="#contact" className="hover:text-[#0A4FBB] transition-colors font-medium">Join us</a>
+          </nav>
+          
+          {/* Social Media */}
+          <div className="flex items-center gap-4">
+            <p className="text-gray-600">Stay connected:</p>
+            <div className="flex gap-3">
+              <a href="https://facebook.com" aria-label="Visit our Facebook page" className="hover:opacity-80 transition-opacity">
+                <Image src={facebook} alt="" width={24} height={24} />
+              </a>
+              <a href="https://linkedin.com" aria-label="Visit our LinkedIn page" className="hover:opacity-80 transition-opacity">
+                <Image src={linkedin} alt="" width={24} height={24} />
+              </a>
+            </div>
           </div>
         </div>
+        
+        <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-center md:text-left">© {year} Isabi Technologies. All rights reserved.</p>
+          <p className="text-gray-500 text-center md:text-right">
+            <a href="#" className="hover:text-[#0A4FBB] transition-colors">Privacy Policy</a>
+          </p>
+        </div>
       </div>
-      
-    </div>
-    <div className=" flex md:justify-between text-[#868686] font-light md:flex-row flex-col gap-10 md:gap-0">
-    <p className="text-center">© {year} Isabi Technologies. All rights reserved.</p>
-    <p className=" text-center">Privacy Policy</p>
-  </div>
-    </div>
+    </footer>
   );
 };
 

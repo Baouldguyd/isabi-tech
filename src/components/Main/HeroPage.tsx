@@ -1,37 +1,20 @@
-import ArrowRightIcon from "@/assets/ArrowRightIcon";
-import DotIcon from "@/assets/Icon/DotIcon";
 import Image from "next/image";
 import brainImage from "@/assets/Logo/brain.svg";
 import Slider from "./Slider";
+import HeroCTA from "@/components/ui/HeroCTA";
 
 const HeroPage = () => {
-  const services = [
-    {
-      name: "WEBSITE DEVELOPMENT",
-      link: "",
-    },
-    {
-      name: "MOBILE APP DEVELOPMENT",
-    },
-    {
-      name: "BRAND DESIGN",
-    },
-    {
-      name: "BUSINESS PROMOTION",
-    },
-  ];
-
   return (
-    <div className=" md:h-[70svh] h-auto md:w-[90%] m-auto w-full  ">
-      <div className="  h-[80%] md:w-[100%] w-[90%] mx-auto  md:grid md:grid-cols-[1fr_30rem] p-4 md:gap-4  gap-8">
+    <div className="md:h-[80svh] h-auto w-full max-w-7xl mx-auto px-4 py-8 md:py-16">
+      <div className="h-full w-full mx-auto md:grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* call to action */}
-        <div className="bg-[#EBEDEE] md:h-full h-[40rem] rounded-md flex flex-col  ">
+        <div className="bg-white rounded-xl shadow-medium p-6 md:p-10 flex flex-col justify-center">
           {/* Header */}
-          <div className=" flex justify-center items-center md:mt-8 flex-col gap-4 p-10">
-            <p className="  text-3xl w-[70%] m-auto text-center font-[manrope-bold]">
+          <div className="flex justify-center items-center flex-col gap-6 mb-8">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-gray-800">
               Empowering Your Business Potential
-            </p>
-            <p className=" font-[manrope-light] text-base text-center md:w-[80%]">
+            </h1>
+            <p className="text-lg text-center text-gray-600 max-w-2xl">
               We specialize in crafting cutting-edge websites and applications
               that resonate with your audience. Let us transform your vision
               into a captivating digital reality, setting your brand apart in
@@ -39,31 +22,26 @@ const HeroPage = () => {
             </p>
           </div>
           {/* CTA Button */}
-          <div className=" justify-center items-center flex ">
-            <div className=" flex gap-[12px]">
-              {/* Arrow right button */}
-              <div className=" h-[56px] w-[56px]  border-2 border-[#0A4FBB] p-2 flex items-center justify-center border-r-[#EBEDEE] rounded-full">
-                <button className=" w-[100%] h-[100%] bg-[#0A4FBB] flex items-center justify-center rounded-full">
-                  <ArrowRightIcon />
-                </button>
-              </div>
+          <HeroCTA 
+            primaryText="Let's Transform Your Business" 
+            secondaryText="See our work" 
+            href="#contact" 
+          />
 
-              <button className=" bg-[#0A4FBB] text-[#EBEDEE] text-[14px]  rounded-lg pl-2 pr-2 ">
-                Let&apos;s Transform Your Business
-              </button>
+          <div className="mt-12">
+            <div className="w-full">
+              <Slider />
             </div>
-          </div>
-
-          <div className=" h-[5rem] mt-6 relative ">
-            <div className=" absolute top-[-10] bottom-5  mx-auto md:w-[95%] w-full"><Slider /></div>
           </div>
         </div>
         {/* image container */}
-        <div className="  md:h-full h-[380px] md:w-[368px]    rounded-md ">
+        <div className="h-[300px] md:h-[500px] w-full rounded-xl overflow-hidden shadow-medium flex items-center justify-center mt-8 md:mt-0">
           <Image
-            alt="Brain Image"
+            alt="Brain Image - representing creative thinking and innovation"
             src={brainImage}
-            className=" w-[100%] h-[100%]"
+            width={400}
+            height={400}
+            className="w-full h-full object-contain"
           />
         </div>
       </div>

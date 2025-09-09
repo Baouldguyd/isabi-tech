@@ -154,7 +154,7 @@ const TestimonialCarousel = () => {
                     ))}
                   </div>
                   <p className="text-lg text-gray-700 mb-6 italic">
-                    "{testimonials[currentIndex].statement}"
+                    &quot;{testimonials[currentIndex].statement}&quot;
                   </p>
                   <div>
                     <p className="text-xl font-bold text-gray-800">{testimonials[currentIndex].name}</p>

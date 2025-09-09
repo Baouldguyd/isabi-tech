@@ -54,7 +54,7 @@ const StatsSection = () => {
     }, interval);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetStats]);
 
   const stats = [
     { value: counters.projects, label: "Projects Completed", suffix: "+" },

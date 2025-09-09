@@ -2,16 +2,15 @@
 
 import { motion } from 'framer-motion';
 import React from 'react';
-import { VariantLabels, TargetAndTransition } from 'framer-motion';
 
 interface MicroInteractionProps {
   children: React.ReactNode;
   className?: string;
-  whileHover?: VariantLabels | TargetAndTransition;
-  whileTap?: VariantLabels | TargetAndTransition;
-  animate?: VariantLabels | TargetAndTransition;
-  initial?: VariantLabels | TargetAndTransition;
-  transition?: object;
+  whileHover?: any;
+  whileTap?: any;
+  animate?: any;
+  initial?: any;
+  transition?: any;
 }
 
 const MicroInteraction: React.FC<MicroInteractionProps> = ({

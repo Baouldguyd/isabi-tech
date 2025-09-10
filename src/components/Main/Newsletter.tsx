@@ -83,7 +83,7 @@ const Newsletter = () => {
                 <div className="text-5xl mb-4">🎉</div>
                 <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
                 <p className="text-blue-100">
-                  You've been subscribed to our newsletter. Check your email for confirmation.
+                  You&apos;ve been subscribed to our newsletter. Check your email for confirmation.
                 </p>
               </motion.div>
             )}

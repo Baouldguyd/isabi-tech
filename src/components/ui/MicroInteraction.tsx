@@ -1,26 +1,19 @@
-"use client";
+import { motion, MotionProps } from 'framer-motion';
 
-import { motion } from 'framer-motion';
-import React from 'react';
-
-interface MicroInteractionProps {
+interface MicroInteractionProps extends Omit<MotionProps, 'children'> {
   children: React.ReactNode;
   className?: string;
-  whileHover?: object;
-  whileTap?: object;
-  animate?: object;
-  initial?: object;
-  transition?: object;
 }
 
-const MicroInteraction: React.FC<MicroInteractionProps> = ({
+ const MicroInteraction: React.FC<MicroInteractionProps> = ({
   children,
   className = '',
   whileHover = { scale: 1.05 },
   whileTap = { scale: 0.95 },
   animate,
   initial,
-  transition = { type: "spring", stiffness: 400, damping: 17 }
+  transition = { type: "spring", stiffness: 400, damping: 17 },
+  ...rest
 }) => {
   return (
     <motion.div
@@ -30,6 +23,7 @@ const MicroInteraction: React.FC<MicroInteractionProps> = ({
       animate={animate}
       initial={initial}
       transition={transition}
+      {...rest}
     >
       {children}
     </motion.div>
